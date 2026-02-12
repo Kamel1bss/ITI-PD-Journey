@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoLocation Watch</title>
+
+  <style>
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>GeoLocation API (watchPosition)</h1>
+
+  <button onclick="startLoc()">Start Live Location</button>
+  <button onclick="stopLoc()">Stop Location</button>
+
+  <hr />
+
+  <iframe id="map"></iframe>
+
+  <script>
+    let watchId;
+
+    let options = {
+      timeout: 0,
+      enableHighAccuracy: true,
+      maximumAge: 0
+    };
+
+    function startLoc() {
+      if (!navigator.geolocation) {
+        console.log("Geolocation not supported");
+        return;
+      }
+
+      watchId = navigator.geolocation.watchPosition(
+        showPos,
+        showError,
+        options
+      );
+    }
+
+    function stopLoc() {
+      if (watchId) {
+        navigator.geolocation.clearWatch(watchId);
+        watchId = null;
+        alert("Location tracking stopped");
+      }
+    }
+
+    function showPos(e) {
+      let latitude = e.coords.latitude;
+      let longitude = e.coords.longitude;
+
+      console.log(latitude, longitude);
+
+      document.getElementById("map").src =
+        "https://maps.google.com/maps?q=" +
+        latitude + "," + longitude +
+        "&z=16&output=embed";
+    }
+
+    function showError(e) {
+      switch (e.code) {
+        case 1:
+          console.log("Permission denied");
+          break;
+        case 2:
+          console.log("Position unavailable");
+          break;
+        case 3:
+          console.log("Timeout");
+          break;
+      }
+    }
+  </script>
+
+</body>
+</html>

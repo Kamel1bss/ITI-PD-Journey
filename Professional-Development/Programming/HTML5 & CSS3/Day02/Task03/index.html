@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Two Web Workers</title>
+</head>
+<body>
+
+  <h2>Web Workers Demo</h2>
+
+  <button onclick="runCalc()">Run Calculation</button>
+  <button onclick="runFetch()">Fetch Data</button>
+
+  <p id="calcResult"></p>
+  <pre id="fetchResult"></pre>
+
+  <script>
+    // Create workers
+    const calcWorker = new Worker("calcWorker.js");
+    const fetchWorker = new Worker("fetchWorker.js");
+
+    function runCalc() {
+      document.getElementById("calcResult").innerText = "Calculating...";
+      calcWorker.postMessage(100000000);
+    }
+
+    function runFetch() {
+      document.getElementById("fetchResult").innerText = "Fetching...";
+      fetchWorker.postMessage(
+        "https://picsum.photos/v2/list"
+      );
+    }
+
+    // Receive from calc worker
+    calcWorker.onmessage = function (e) {
+      document.getElementById("calcResult").innerText =
+        "Calculation result: " + e.data;
+    };
+
+    // Receive from fetch worker
+    fetchWorker.onmessage = function (e) {
+      document.getElementById("fetchResult").innerText =
+        JSON.stringify(e.data, null, 2);
+    };
+  </script>
+
+</body>
+</html>

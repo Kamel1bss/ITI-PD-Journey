@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page 1 - Add User</title>
+</head>
+<body>
+
+  <h2>Add User</h2>
+
+  <form onsubmit="saveUser(event)">
+    <label>
+      Name:
+      <input type="text" id="name" required>
+    </label>
+    <br><br>
+
+    <label>
+      Age:
+      <input type="number" id="age" required>
+    </label>
+    <br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function saveUser(event) {
+      event.preventDefault();
+
+      let name = document.getElementById("name").value;
+      let age = document.getElementById("age").value;
+
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+
+      users.push({
+        name: name,
+        age: age
+      });
+
+      localStorage.setItem("users", JSON.stringify(users));
+
+      window.location.href = "users.html";
+    }
+  </script>
+
+</body>
+</html>

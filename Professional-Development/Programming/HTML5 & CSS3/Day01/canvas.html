@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Half Circle Switch</title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="600" height="400"
+        style="border:1px solid #aaa"></canvas>
+
+<script>
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+const cx = 300;
+const cy = 200;
+const r  = 80;
+
+let showTop = true;
+let flips = 0;
+const maxFlips = 10;
+
+function drawHalfCircle(isTop) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  ctx.beginPath();
+  if (isTop) {
+    ctx.arc(cx, cy, r, Math.PI, 0, false);
+  } else {
+    ctx.arc(cx, cy, r, 0, Math.PI, false);
+  }
+  ctx.closePath();
+
+  ctx.fillStyle = "yellow";
+  ctx.strokeStyle = "black";
+  ctx.fill();
+  ctx.stroke();
+}
+
+function drawFullCircle() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  ctx.beginPath();
+  ctx.arc(cx, cy, r, 0, Math.PI * 2);
+  ctx.closePath();
+
+  ctx.fillStyle = "yellow";
+  ctx.strokeStyle = "black";
+  ctx.fill();
+  ctx.stroke();
+}
+
+const interval = setInterval(() => {
+  if (flips >= maxFlips) {
+    clearInterval(interval);
+    drawFullCircle();   
+    return;
+  }
+
+  drawHalfCircle(showTop);
+  showTop = !showTop;
+  flips++;
+}, 500);
+</script>
+
+</body>
+</html>

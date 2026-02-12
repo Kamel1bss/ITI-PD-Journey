@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Controls Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+
+        video {
+            width: 600px;
+            display: block;
+            margin: 0 auto 15px;
+        }
+
+        .controls button, .controls input, .controls select {
+            margin: 5px;
+            padding: 6px 10px;
+            font-size: 14px;
+        }
+
+        #progress {
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Custom Video Controls</h2>
+
+    <video id="myVideo">
+        <source src="frozen.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Progress Bar -->
+    <input type="range" id="progress" value="0">
+
+    <div class="controls">
+        <button onclick="playPause()">Play / Pause</button>
+        <button onclick="stopVideo()">Stop</button>
+
+        <button onclick="start()"><<</button>
+        <button onclick="forward()"><</button>
+
+        <button onclick="backward()">></button>
+        <button onclick="end()">>></button>
+
+        <button onclick="volumeDown()">Vol -</button>
+        <button onclick="volumeUp()">Vol +</button>
+        <button onclick="mute()">Mute</button>
+
+        <select onchange="changeSpeed(this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="1" selected>1x</option>
+            <option value="1.5">1.5x</option>
+            <option value="2">2x</option>
+        </select>
+
+        <button onclick="fullScreen()">Fullscreen</button>
+    </div>
+
+    <script>
+        const video = document.getElementById("myVideo");
+        const progress = document.getElementById("progress");
+
+        function playPause() {
+            if (video.paused)
+                video.play();
+            else
+                video.pause();
+        }
+
+        function stopVideo() {
+            video.pause();
+            video.currentTime = 0;
+        }
+
+        function forward() {
+            video.currentTime += 5;
+        }
+
+        function start() {
+            video.currentTime = 0;
+        }
+
+        function end() {
+            video.currentTime = video.duration;
+        }
+
+        function backward() {
+            video.currentTime -= 5;
+        }
+
+        function volumeUp() {
+            if (video.volume < 1)
+                video.volume += 0.1;
+        }
+
+        function volumeDown() {
+            if (video.volume > 0)
+                video.volume -= 0.1;
+        }
+
+        function mute() {
+            video.muted = !video.muted;
+        }
+
+        function changeSpeed(speed) {
+            video.playbackRate = speed;
+        }
+
+        function fullScreen() {
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            }
+        }
+
+        video.addEventListener("timeupdate", () => {
+            progress.max = video.duration;
+            progress.value = video.currentTime;
+        });
+
+        progress.addEventListener("input", () => {
+            video.currentTime = progress.value;
+        });
+    </script>
+
+</body>
+</html>

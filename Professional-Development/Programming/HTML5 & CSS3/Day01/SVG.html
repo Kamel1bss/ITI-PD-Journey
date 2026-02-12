@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pythagorean Theorem Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        svg {
+            margin-top: 20px;
+        }
+
+        .label {
+            font-size: 14px;
+            fill: black;
+        }
+
+        .title {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Pythagorean Theorem Calculator</h2>
+
+    <svg width="300" height="300">
+        <polygon points="80,250 180,250 180,80"
+                 fill="red" />
+
+        <text x="120" y="270" class="label">a</text>
+        <text x="190" y="170" class="label">b</text>
+        <text x="110" y="150" class="label">c</text>
+    </svg>
+
+    <p class="title">according to pythagoras theorem</p>
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML" style="color:red; font-size:24px;">
+        <mi>c</mi>
+        <mo>=</mo>
+        <msqrt>
+            <msup>
+                <mi>a</mi>
+                <mn>2</mn>
+            </msup>
+            <mo>+</mo>
+            <msup>
+                <mi>b</mi>
+                <mn>2</mn>
+            </msup>
+        </msqrt>
+    </math>
+
+</body>
+</html>

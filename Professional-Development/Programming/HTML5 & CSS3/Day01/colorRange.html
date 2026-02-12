@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Color Range</title>
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            padding: 30px;
+        }
+
+        .range-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: inline-block;
+            width: 60px;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="range-group">
+        <label>Red</label>
+        <input type="range" min="0" max="255" value="0" id="red">
+    </div>
+
+    <div class="range-group">
+        <label>Green</label>
+        <input type="range" min="0" max="255" value="0" id="green">
+    </div>
+
+    <div class="range-group">
+        <label>Blue</label>
+        <input type="range" min="0" max="255" value="0" id="blue">
+    </div>
+
+    <h2 id="text">
+        Change the 3 Color Ranges above and observe my color Change
+    </h2>
+
+    <script>
+        const red = document.getElementById("red");
+        const green = document.getElementById("green");
+        const blue = document.getElementById("blue");
+        const text = document.getElementById("text");
+
+        function changeColor() {
+            const r = red.value;
+            const g = green.value;
+            const b = blue.value;
+
+            text.style.color = `rgb(${r}, ${g}, ${b})`;
+        }
+
+        red.addEventListener("input", changeColor);
+        green.addEventListener("input", changeColor);
+        blue.addEventListener("input", changeColor);
+    </script>
+
+</body>
+</html>
