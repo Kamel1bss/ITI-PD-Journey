@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Style</title>
+    <script src="textstyle.js"></script>
+</head>
+
+<body>
+
+<p id="para" style="border:1px solid black; padding:10px;">
+    Here is a paragraph of text that has various alignment
+    characteristics that can be changed dynamically.
+    Click the radio buttons below to view combinations of text style settings.
+</p>
+
+<table border="1" cellpadding="10">
+<tr>
+
+    <td>
+        <b>fontFamily</b><br>
+        <input type="radio" name="fontFamily" value="arial" onclick="changeStyle()"> arial<br>
+        <input type="radio" name="fontFamily" value="courier" onclick="changeStyle()"> courier<br>
+        <input type="radio" name="fontFamily" value="georgia" onclick="changeStyle()"> georgia<br>
+        <input type="radio" name="fontFamily" value="impact" onclick="changeStyle()"> impact<br>
+        <input type="radio" name="fontFamily" value="times new roman" onclick="changeStyle()"> times<br>
+        <input type="radio" name="fontFamily" value="verdana" onclick="changeStyle()"> verdana<br>
+    </td>
+
+    <td>
+        <b>textAlign</b><br>
+        <input type="radio" name="textAlign" value="left" onclick="changeStyle()"> left<br>
+        <input type="radio" name="textAlign" value="center" onclick="changeStyle()"> center<br>
+        <input type="radio" name="textAlign" value="right" onclick="changeStyle()"> right<br>
+        <input type="radio" name="textAlign" value="justify" onclick="changeStyle()"> justify<br>
+    </td>
+
+    <td>
+        <b>lineHeight</b><br>
+        <input type="radio" name="lineHeight" value="normal" onclick="changeStyle()"> normal<br>
+        <input type="radio" name="lineHeight" value="10px" onclick="changeStyle()"> 10px<br>
+        <input type="radio" name="lineHeight" value="15px" onclick="changeStyle()"> 15px<br>
+        <input type="radio" name="lineHeight" value="1.5" onclick="changeStyle()"> 1.5<br>
+    </td>
+
+    <td>
+        <b>letterSpacing</b><br>
+        <input type="radio" name="letterSpacing" value="normal" onclick="changeStyle()"> normal<br>
+        <input type="radio" name="letterSpacing" value="-1px" onclick="changeStyle()"> -1px<br>
+        <input type="radio" name="letterSpacing" value="2px" onclick="changeStyle()"> 2px<br>
+        <input type="radio" name="letterSpacing" value="3px" onclick="changeStyle()"> 3px<br>
+    </td>
+
+    <td>
+        <b>textIndent</b><br>
+        <input type="radio" name="textIndent" value="0px" onclick="changeStyle()"> 0px<br>
+        <input type="radio" name="textIndent" value="5px" onclick="changeStyle()"> 5px<br>
+        <input type="radio" name="textIndent" value="15px" onclick="changeStyle()"> 15px<br>
+        <input type="radio" name="textIndent" value="25px" onclick="changeStyle()"> 25px<br>
+    </td>
+
+    <!-- textTransform -->
+    <td>
+        <b>textTransform</b><br>
+        <input type="radio" name="textTransform" value="none" onclick="changeStyle()"> none<br>
+        <input type="radio" name="textTransform" value="capitalize" onclick="changeStyle()"> capitalize<br>
+        <input type="radio" name="textTransform" value="uppercase" onclick="changeStyle()"> uppercase<br>
+        <input type="radio" name="textTransform" value="lowercase" onclick="changeStyle()"> lowercase<br>
+    </td>
+
+    <!-- textDecoration -->
+    <td>
+        <b>textDecoration</b><br>
+        <input type="radio" name="textDecoration" value="none" onclick="changeStyle()"> none<br>
+        <input type="radio" name="textDecoration" value="line-through" onclick="changeStyle()"> line-through<br>
+        <input type="radio" name="textDecoration" value="overline" onclick="changeStyle()"> overline<br>
+        <input type="radio" name="textDecoration" value="underline" onclick="changeStyle()"> underline<br>
+    </td>
+
+</tr>
+</table>
+
+    <script src="Task04.js"></script>
+</body>
+</html>

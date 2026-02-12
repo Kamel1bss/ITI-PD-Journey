@@ -1,0 +1,111 @@
+    body {
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ea66d2, #3d1c5e);
+    }
+
+    .search-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        margin-bottom: 30px;
+    }
+
+    .search-container input {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        font-size: 16px;
+        width: 250px;
+        border-radius: 30px;
+    }
+
+    .search-container button {
+        border: none;
+        background: #667eea;
+        color: white;
+        padding: 12px 22px;
+        margin-left: 150px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.3s ease;
+    }
+
+    .search-container button:hover {
+        background: #5a67d8;
+    }
+
+    .cards {
+        display: flex;
+        gap: 20px;              /* space between cards */
+        justify-content: center; /* optional */
+        display: none;
+    }
+        .card {
+        width: 300px;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .flag {
+        width: 100%;
+        height: 160px;
+        background: #ddd; /* placeholder for flag */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #777;
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .country-name {
+        font-size: 22px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .region {
+        font-size: 13px;
+        color: #888;
+        margin-bottom: 20px;
+    }
+
+    .info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        color: #555;
+        font-size: 15px;
+    }
+
+    .icon {
+        width: 28px;
+        height: 28px;
+        background: #e5e7eb;
+        border-radius: 50%;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    .placeholder {
+        background: #e5e7eb;
+        height: 14px;
+        width: 140px;
+        border-radius: 4px;
+    }

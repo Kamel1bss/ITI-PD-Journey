@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <input  id="search" type="text" placeholder="Search for a country...">
+            <button id="btn">Search</button>
+        </div>
+        <div class="cards" id="cards">
+            <div class="card">
+            <!-- Flag Placeholder -->
+            <div class="flag">
+                <img id="countryImg" src="" alt="" height="160px" width="300px">
+            </div>
+
+            <div class="content">
+                <!-- Country Name -->
+                <div class="country-name" id="country-name">Country Name</div>
+                <div class="region" id="region">Region</div>
+
+                <!-- Population -->
+                <div class="info">
+                    <div class="icon">👥</div>
+                    <div id="population"></div>
+                </div>
+
+                <!-- Language -->
+                <div class="info">
+                    <div class="icon">🗣</div>
+                    <div id="language"></div>
+                </div>
+
+                <!-- Currency -->
+                <div class="info">
+                    <div class="icon">💰</div>
+                    <div id="currency"></div>
+                </div>
+            </div>
+            </div>
+            <div class="card">
+            <!-- Flag Placeholder -->
+            <div class="flag">
+                <img id="countryImg2" src="" alt="" height="160px" width="300px">
+            </div>
+
+            <div class="content">
+                <!-- Country Name -->
+                <div class="country-name" id="country-name2">Country Name</div>
+                <div class="region" id="region2">Region</div>
+
+                <!-- Population -->
+                <div class="info">
+                    <div class="icon">👥</div>
+                    <div id="population2"></div>
+                </div>
+
+                <!-- Language -->
+                <div class="info">
+                    <div class="icon">🗣</div>
+                    <div id="language2"></div>
+                </div>
+
+                <!-- Currency -->
+                <div class="info">
+                    <div class="icon">💰</div>
+                    <div id="currency2"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="countries.js"></script>
+</body>
+</html>
