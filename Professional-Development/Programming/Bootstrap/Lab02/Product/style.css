@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+
+body {
+    background: #f8f9fc;
+    font-family: 'DM Sans', sans-serif;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #3b82f6;
+    letter-spacing: -0.5px;
+}
+
+.product-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+    background: #fff;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+    width: 90px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card .card-body {
+    padding: 12px 14px;
+}
+
+.product-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #1e293b;
+    margin-bottom: 2px;
+}
+
+.product-price {
+    color: #3b82f6;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.product-price span {
+    font-weight: 400;
+    color: #64748b;
+}
+
+.product-stock {
+    font-size: 0.8rem;
+    color: #64748b;
+}

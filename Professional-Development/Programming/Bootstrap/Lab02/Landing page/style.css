@@ -1,0 +1,530 @@
+body{
+background:#ffff;
+font-family: 'Segoe UI', sans-serif;
+}
+
+
+/* Logo */
+
+.logo-circle{
+width:35px;
+height:35px;
+border-radius:50%;
+background:#458ff6;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+}
+
+
+/* Hero */
+
+.hero{
+padding:80px 0;
+}
+
+.hero-title{
+font-size:48px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.hero-text{
+color:#7d7987;
+max-width:420px;
+margin-bottom:30px;
+}
+
+.hero-btn{
+padding:12px 30px;
+border-radius:30px;
+background:#458ff6;
+border:none;
+}
+
+.hero-btn:hover{
+background:#347ae0;
+}
+
+
+/* ── Our Services ── */
+
+.services {
+  background: #f8fbff;
+}
+
+.services-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.services-divider {
+  width: 40px;
+  height: 3px;
+  background: #458ff6;
+  border-radius: 2px;
+}
+
+.services-subtitle {
+  color: #7d7987;
+  max-width: 560px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Service Card */
+.service-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px 28px 32px;
+  height: 100%;
+  box-shadow: 0 2px 16px rgba(69, 143, 246, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 32px rgba(69, 143, 246, 0.15);
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  background: #eef5ff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.service-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  font-size: 14px;
+  color: #7d7987;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Learn More Button */
+.services-learn-btn {
+  padding: 12px 44px;
+  border-radius: 30px;
+  border: 2px solid #458ff6;
+  color: #458ff6;
+  font-weight: 600;
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+}
+
+.services-learn-btn:hover {
+  background: #458ff6;
+  color: #fff;
+}
+
+
+/* ── Leading Healthcare Providers ── */
+
+.leading {
+  background: #fff;
+}
+
+.leading-img {
+  max-width: 480px;
+}
+
+.leading-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.25;
+}
+
+.leading-divider {
+  width: 40px;
+  height: 3px;
+  background: #458ff6;
+  border-radius: 2px;
+}
+
+.leading-text {
+  color: #7d7987;
+  font-size: 15px;
+  line-height: 1.75;
+  max-width: 400px;
+  margin-bottom: 28px;
+}
+
+.leading-learn-btn {
+  padding: 11px 36px;
+  border-radius: 30px;
+  border: 2px solid #458ff6;
+  color: #458ff6;
+  font-weight: 600;
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+}
+
+.leading-learn-btn:hover {
+  background: #458ff6;
+  color: #fff;
+}
+
+
+/* ── Download Mobile Apps ── */
+
+.download {
+  background: #f8fbff;
+}
+
+.download-img {
+  max-width: 480px;
+}
+
+.download-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.25;
+}
+
+.download-divider {
+  width: 40px;
+  height: 3px;
+  background: #458ff6;
+  border-radius: 2px;
+}
+
+.download-text {
+  color: #7d7987;
+  font-size: 15px;
+  line-height: 1.75;
+  max-width: 380px;
+  margin-bottom: 28px;
+}
+
+.download-btn {
+  padding: 11px 36px;
+  border-radius: 30px;
+  border: 2px solid #458ff6;
+  color: #458ff6;
+  font-weight: 600;
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+}
+
+.download-btn:hover {
+  background: #458ff6;
+  color: #fff;
+}
+
+
+/* ── Testimonials ── */
+
+.testimonials {
+  background: #fff;
+  padding: 60px 0;
+}
+
+.testimonials-card {
+  background: linear-gradient(135deg, #6ab0f5 0%, #458ff6 60%, #74b3f7 100%);
+  border-radius: 24px;
+  padding: 56px 60px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dot grid decorations */
+.testi-dots-tr,
+.testi-dots-bl {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.35) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+}
+.testi-dots-tr { top: 20px; right: 30px; }
+.testi-dots-bl { bottom: 20px; left: 20px; }
+
+.testi-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.testi-divider {
+  width: 40px;
+  height: 3px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 2px;
+}
+
+/* Avatar */
+.testi-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.5);
+  background: #dce8f7;
+}
+
+.testi-name {
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.testi-role {
+  color: rgba(255,255,255,0.75);
+  font-size: 13px;
+}
+
+.testi-quote {
+  color: rgba(255,255,255,0.92);
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Arrow buttons */
+.testi-arrow {
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.testi-arrow:hover { opacity: 1; }
+
+/* Indicators */
+.testi-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.testi-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #c5d8f5;
+  cursor: pointer;
+  display: inline-block;
+  transition: background 0.2s, transform 0.2s;
+}
+.testi-dot.active {
+  background: #458ff6;
+  transform: scale(1.3);
+}
+
+.testi-controls {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ── Latest Articles ── */
+
+.articles {
+  background: #f8fbff;
+  position: relative;
+}
+
+.articles-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.articles-divider {
+  width: 40px;
+  height: 3px;
+  background: #458ff6;
+  border-radius: 2px;
+}
+
+.article-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(69, 143, 246, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 32px rgba(69, 143, 246, 0.15);
+}
+
+.article-img-wrap {
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+}
+
+.article-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.article-card:hover .article-img {
+  transform: scale(1.05);
+}
+
+.article-body {
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.article-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.article-desc {
+  font-size: 14px;
+  color: #7d7987;
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.article-link {
+  color: #458ff6;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.article-link:hover {
+  opacity: 0.75;
+}
+
+/* View All Button */
+.articles-view-btn {
+  padding: 12px 44px;
+  border-radius: 30px;
+  border: 2px solid #458ff6;
+  color: #458ff6;
+  font-weight: 600;
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+}
+
+.articles-view-btn:hover {
+  background: #458ff6;
+  color: #fff;
+}
+
+/* ── Footer ── */
+
+.footer {
+  background: linear-gradient(135deg, #6ab0f5 0%, #458ff6 60%, #74b3f7 100%);
+  padding: 70px 0 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.footer-brand-name {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer-brand {
+  text-decoration: none;
+}
+
+.footer-desc {
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.footer-copy {
+  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+  margin: 0;
+}
+
+.footer-heading {
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* Dot grid decoration */
+.footer-dots-bl {
+  position: absolute;
+  bottom: 16px;
+  left: 24px;
+  width: 120px;
+  height: 100px;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.3) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+  pointer-events: none;
+}
