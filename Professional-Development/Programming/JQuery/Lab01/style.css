@@ -1,0 +1,70 @@
+body{
+font-family: Arial;
+text-align:center;
+background:#f4f4f4;
+}
+
+button{
+padding:10px 20px;
+margin:10px;
+border:none;
+background:#007bff;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#0056b3;
+}
+
+.section{
+display:none;
+margin-top:30px;
+padding:20px;
+background:white;
+width:60%;
+margin-left:auto;
+margin-right:auto;
+border-radius:6px;
+}
+
+.carousel img{
+width:400px;
+height:250px;
+}
+
+.form-group{
+margin:10px;
+}
+
+input, textarea{
+padding:8px;
+width:80%;
+}
+
+#result{
+margin-top:20px;
+background:#e9ffe9;
+padding:15px;
+display:none;
+}
+
+.service{
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:5px;
+}
+
+.service-title{
+background:#007bff;
+color:white;
+padding:10px;
+cursor:pointer;
+margin:0;
+}
+
+.service-desc{
+display:none;
+padding:10px;
+background:#f9f9f9;
+}

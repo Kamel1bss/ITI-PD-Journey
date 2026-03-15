@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery Demo</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h1>My jQuery Page</h1>
+
+        <button id="aboutBtn">About</button>
+        <button id="imagesBtn">Images</button>
+        <button id="servicesBtn">Services</button>
+        <button id="complainBtn">Complain</button>
+
+
+        <!-- ABOUT -->
+
+        <div id="about" class="section">
+
+        <h2>About Us</h2>
+
+        <p>
+        We provide high quality services for our customers.
+        This page demonstrates jQuery navigation.
+        </p>
+
+        </div>
+
+
+        <!-- IMAGES -->
+
+        <div id="images" class="section">
+
+        <h2>Image Carousel</h2>
+
+        <div class="carousel">
+        <img id="carouselImage" src="https://picsum.photos/400/250?1">
+        </div>
+
+        <br>
+
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+
+        </div>
+
+
+        <!-- SERVICES -->
+
+        <div id="services" class="section">
+
+        <h2>Our Services</h2>
+
+        <div class="service">Web Development</div>
+        <div class="service">Mobile Applications</div>
+        <div class="service">UI / UX Design</div>
+        <div class="service">Technical Support</div>
+
+        </div>
+
+
+        <!-- COMPLAIN -->
+
+        <div id="complain" class="section">
+
+        <h2>Submit a Complaint</h2>
+
+        <form id="complainForm">
+
+        <div class="form-group">
+        <input type="text" id="name" placeholder="Your Name">
+        </div>
+
+        <div class="form-group">
+        <input type="email" id="email" placeholder="Email">
+        </div>
+
+        <div class="form-group">
+        <textarea id="message" placeholder="Your Complaint"></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+
+        </form>
+
+        <div id="result"></div>
+
+        </div>
+
+
+        <script>
+
+        /* hide all sections */
+
+        function hideAll(){
+        $(".section").hide();
+        }
+
+
+        /* ABOUT */
+
+        $("#aboutBtn").click(function(){
+        hideAll();
+        $("#about").show();
+        });
+
+
+        /* IMAGES */
+
+        $("#imagesBtn").click(function(){
+        hideAll();
+        $("#images").show();
+        });
+
+
+        /* SERVICES (slide animation) */
+
+        $("#servicesBtn").click(function(){
+
+        if($("#services").is(":visible")){
+        $("#services").slideUp();
+        }
+        else{
+        hideAll();
+        $("#services").slideDown();
+        }
+
+        });
+
+
+        /* COMPLAIN */
+
+        $("#complainBtn").click(function(){
+        hideAll();
+        $("#complain").show();
+        });
+
+
+        /* CAROUSEL */
+
+        let images = [
+        "https://picsum.photos/400/250?1",
+        "https://picsum.photos/400/250?2",
+        "https://picsum.photos/400/250?3"
+        ];
+
+        let index = 0;
+
+        $("#next").click(function(){
+
+        index++;
+
+        if(index >= images.length)
+        index = 0;
+
+        $("#carouselImage").attr("src", images[index]);
+
+        });
+
+
+        $("#prev").click(function(){
+
+        index--;
+
+        if(index < 0)
+        index = images.length - 1;
+
+        $("#carouselImage").attr("src", images[index]);
+
+        });
+
+
+        /* COMPLAINT FORM */
+
+        $("#complainForm").submit(function(e){
+
+        e.preventDefault();
+
+        let name = $("#name").val();
+        let email = $("#email").val();
+        let message = $("#message").val();
+
+        $("#result").html(
+
+        "<h3>Complaint Submitted</h3>" +
+        "<p><b>Name:</b> " + name + "</p>" +
+        "<p><b>Email:</b> " + email + "</p>" +
+        "<p><b>Message:</b> " + message + "</p>"
+
+        );
+
+        $("#result").show();
+
+        });
+
+        </script>
+
+    </body>
+</html>
