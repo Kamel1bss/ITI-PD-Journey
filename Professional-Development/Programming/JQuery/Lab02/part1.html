@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Moving Car</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        #car {
+            position: relative;
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+<button id="moveBtn">Move Car</button>
+
+<br><br>
+
+<img id="car" src="imgs/12.gif">
+
+<p>Left Value: <span id="leftValue">0px</span></p>
+
+<script>
+$(document).ready(function () {
+
+    $("#moveBtn").click(function () {
+
+        var leftPos = 0;
+
+        var interval = setInterval(function () {
+
+            leftPos += 5;
+
+            $("#car").css("left", leftPos + "px");
+
+            $("#leftValue").text(leftPos + "px");
+
+            if (leftPos >= 345) {
+                clearInterval(interval);
+            }
+
+        }, 50);
+
+    });
+
+});
+</script>
+
+</body>
+</html>

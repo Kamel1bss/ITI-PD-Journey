@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Slideshow</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#74ebd5,#9face6);
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+/* title */
+
+h2{
+    margin-top:40px;
+    color:white;
+    font-size:36px;
+    letter-spacing:1px;
+}
+
+/* slider container */
+
+.slider-container{
+    width:450px;
+    margin:50px auto;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* images */
+
+.slider img{
+    width:100%;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.slider img:hover{
+    transform:scale(1.05);
+}
+
+/* slick arrows */
+
+.slick-prev:before,
+.slick-next:before{
+    color:#333;
+    font-size:30px;
+}
+
+/* dots */
+
+.slick-dots li button:before{
+    color:#555;
+}
+
+.slick-dots li.slick-active button:before{
+    color:#000;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Image Slideshow</h2>
+
+<div class="slider-container">
+
+<div class="slider">
+    <div><img src="imgs/1.jpg"></div>
+    <div><img src="imgs/2.jpg"></div>
+    <div><img src="imgs/3.jpg"></div>
+</div>
+
+</div>
+
+<script>
+
+$(document).ready(function(){
+
+$('.slider').slick({
+    autoplay:true,
+    autoplaySpeed:2000,
+    dots:true,
+    arrows:true,
+    infinite:true,
+    fade:true
+});
+
+});
+
+</script>
+
+</body>
+</html>
