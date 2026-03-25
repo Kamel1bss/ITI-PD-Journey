@@ -1,0 +1,9 @@
+﻿=> Compare the models and the snapshot of the Db stored in the Migration_history table
+=> prevent defualt => Data annotation OR fluent APIs
+=> Models get created in the DB as Tables if 
+											=> DbSet<Model> in _context
+											=> Navigation property in other mod
+=> More than on relationship between models
+	=> Use => InverseProperty DataAnnotation
+=> Complex types in EF6 and Core
+=> TPH (TablePairHirerachy)

@@ -1,0 +1,28 @@
+﻿					        From  EF06.. TO -> EFCore
+                           ===========================
+    [1] Design first [Deprecated] EF06
+    [2] Code first
+    [3] DB first
+
+    =================================================================================
+    (1) Lazy loading =>>>>>>>>>>>>> (IMPORATNT) Navigation property(VIRTUAL)
+    var query = from dpet in _context.Departments
+                where id = 5
+                select dept;
+
+    Include Navigation property when Iterating or accessing the Object
+    =================================================================================
+    (2) see the SQL code Genrated by the _Context Translated from EF
+    _context.log = log => Debug.log(log); // SQL query
+    =================================================================================
+    (3) Change Tracker => _context cache object coming from the DB 
+    =================================================================================
+    (4) Problem Bulk delete, Bulk Update => one solution
+        (call Stored Procedure in EF) Test how you can do it
+    =================================================================================
+    (5) SaveChanges() -> all Modified entries in one transaction 
+        if failed => rollback
+    =================================================================================
+    (6) Concurrency Check => Property(ConcurrencyMode => Fixed)
+    =================================================================================
+
