@@ -1,0 +1,68 @@
+1	EfCore Power Tools => Reverse enginnering
+
+2   Forms With tag helper => POST is default method
+	Form Without tag helper => GET is default method
+	
+3	[HttpPost] // action selector
+
+4 Model Binder => Validation according to DataAnnotation so use VMs
+	// Old way
+        //Department department = new Department();
+        //department.DeptId = int.Parse(Request.Form["DeptId"]);
+        //department.DeptName = Request.Form["DeptName"];
+        //department.Capacity = int.Parse(Request.Form["Capacity"]);
+        //_deptRepo.Add(department);
+        //return Json(department);
+
+        // model binder
+        // search for dept.DeptId and then DeptId
+        // form data
+        // then routing data
+        // query string data
+
+5   asp-validation-for -> span
+    asp-validation-summary -> div
+
+6 client-side validations
+
+7 PipeLine in program.cs
+  request => Request object new HttpContex()
+  request ----- middleware -------- controller
+  ans middleware => run, use, map
+  run == shorcircut
+   // midlleware m1
+        //app.Use(async (context, next) =>
+        //{
+        //    await context.Response.WriteAsync("welcom from m1\n");
+        //    if(context.Request.Method == "POST") 
+        //        await next.Invoke();
+        //    await context.Response.WriteAsync("After return from m2\n");
+        //});
+
+        //// midlleware m2
+        //// Run => shortCircuit
+        //app.Run(async context =>
+        //{
+        //    await context.Response.WriteAsync("welcom from m2\n");
+        //});
+
+    8 Dependency Injection container => services
+        // Transient => new instance every time
+        // Scoped => one instance per request
+        // Singleton => one instance for the entire application 
+
+    9 State managment
+        // cookies => request, response (client memory)
+        // session => Httpcontext (server memory) => sessionid(in client cookies)persession
+            => register in DIC
+            => Use Session Middleware
+
+    10 filters
+        inherit ActionFilterAttribute
+
+    11 authorization & authentaction
+
+    // task
+        users table
+        Roles table
+        // Link between them
