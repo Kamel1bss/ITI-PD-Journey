@@ -1,0 +1,49 @@
+﻿@model Department
+
+<div class="container mt-5">
+
+    <div class="card shadow-sm">
+
+        <div class="card-header bg-success text-white">
+            <h4 class="mb-0">Create Department</h4>
+        </div>
+
+        <div class="card-body">
+
+            <form method="post">
+
+                <div class="mb-3">
+                    <label asp-for="DeptId" class="form-label fw-semibold">
+                        Dept Id:
+                    </label>
+                    <input asp-for="DeptId" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DeptName" class="form-label fw-semibold">
+                        Dept Name:
+                    </label>
+                    <input asp-for="DeptName" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Capacity" class="form-label fw-semibold">
+                    </label>
+                    <input asp-for="Capacity" class="form-control" />
+                </div>
+
+                <div class="d-flex justify-content-end gap-2">
+
+                    <a asp-action="Index"
+                       class="btn btn-outline-secondary px-4">
+                        Cancel
+                    </a>
+
+                    <input type="submit"
+                           value="Create"
+                           class="btn btn-success px-4" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

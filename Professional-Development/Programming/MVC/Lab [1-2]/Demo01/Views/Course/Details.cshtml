@@ -1,0 +1,77 @@
+﻿@model Course
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold text-primary">Course Details</h2>
+        <a asp-action="Index" class="btn btn-outline-dark btn-sm">
+            Back
+        </a>
+    </div>
+
+    <div class="card shadow border-0">
+
+        <div class="card-header bg-success text-white">
+            Course Information
+        </div>
+
+        <div class="card-body">
+
+            <div class="row mb-3">
+                <div class="col-sm-4 fw-bold text-secondary">
+                    Course Id
+                </div>
+                <div class="col-sm-8 text-dark">
+                    <span class="badge bg-primary px-3 py-2">
+                        @Model.CrsId
+                    </span>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="row mb-3">
+                <div class="col-sm-4 fw-bold text-secondary">
+                    Course Name
+                </div>
+                <div class="col-sm-8 text-dark">
+                    <span class="badge bg-warning text-dark px-3 py-2">
+                        @Model.CrsName
+                    </span>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="row">
+                <div class="col-sm-4 fw-bold text-secondary">
+                    Duration
+                </div>
+                <div class="col-sm-8">
+                    <span class="badge bg-danger px-3 py-2">
+                        @Model.Duration
+                    </span>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="row align-items-center">
+                <div class="col-sm-4 fw-bold text-secondary">
+                    Departments
+                </div>
+
+                <div class="col-sm-8">
+                    @foreach (var dept in Model.Departments)
+                    {
+                        <span class="badge bg-info text-dark px-3 py-2 me-2 mb-2">
+                            @dept.DeptName
+                        </span>
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

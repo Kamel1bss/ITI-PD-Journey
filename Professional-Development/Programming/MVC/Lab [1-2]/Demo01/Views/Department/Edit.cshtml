@@ -1,0 +1,38 @@
+﻿@model Department
+
+<div class="container mt-5">
+
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Update @Model.DeptName Department</h4>
+        </div>
+
+        <div class="card-body">
+
+            <form method="post">
+
+                <input type="hidden" asp-for="DeptId" />
+
+                <div class="mb-3">
+                    <label asp-for="DeptName" class="form-label fw-semibold">
+                        Dept Name:
+                    </label>
+                    <input asp-for="DeptName" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Capacity" class="form-label fw-semibold">
+                    </label>
+                    <input asp-for="Capacity" class="form-control" />
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <input type="submit" value="Update" class="btn btn-primary px-4" />
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>

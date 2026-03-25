@@ -1,0 +1,33 @@
+﻿@model Department
+
+<h1 class="mb-4">Update Department @Model.DeptName Courses</h1>
+
+<form method="post" class="container">
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <label class="form-label fw-bold">Courses to remove</label>
+            <select name="coursesToRemove" multiple class="form-select" size="8">
+                @foreach (var item in Model.Courses)
+                {
+                    <option value="@item.CrsId">@item.CrsName</option>
+                }
+            </select>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label fw-bold">Courses to add</label>
+            <select name="coursesToAdd" multiple class="form-select" size="8">
+                @foreach (var item in ViewBag.coursesNotInDept)
+                {
+                    <option value="@item.CrsId">@item.CrsName</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <input type="submit" value="Update" class="btn btn-primary px-4" />
+    </div>
+
+</form>

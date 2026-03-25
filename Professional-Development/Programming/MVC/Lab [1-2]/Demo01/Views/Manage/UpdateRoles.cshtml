@@ -1,0 +1,21 @@
+﻿@model IdentityUser
+
+<h1>Update Roles of User @Model.UserName</h1>
+<form method="post">
+    Roles Already Assigned
+    <select multiple name="RolesToRemove">
+        @foreach (var item in ViewBag.userRoles)
+        {
+            <option>@item</option>
+        }
+    </select>
+    <br />
+     Roles No Assigned
+    <select multiple name="RolesToAdd">
+        @foreach (var item in ViewBag.noAssignedRoles)
+        {
+            <option>@item</option>
+        }
+    </select>
+    <input type="submit" value="Update" />
+</form>

@@ -1,0 +1,77 @@
+﻿@model CourseVM
+
+@{
+    SelectList deptList = new SelectList(ViewBag.depts, "DeptId", "DeptName");
+}
+
+<div class="container mt-5">
+
+    <div class="card shadow-sm">
+
+        <div class="card-header bg-success text-white">
+            <h4 class="mb-0">Create Student</h4>
+        </div>
+
+        <div class="card-body">
+
+            <form method="post">
+
+                <div class="mb-3">
+                    <label asp-for="CrsId" class="form-label fw-semibold">
+                        Course Id:
+                    </label>
+                    <input asp-for="CrsId" class="form-control" />
+                    <span asp-validation-for="CrsId" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="CrsName" class="form-label fw-semibold">
+                        Course Name:
+                    </label>
+                    <input asp-for="CrsName" class="form-control" />
+                    <span asp-validation-for="CrsName" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Duration" class="form-label fw-semibold">
+                    </label>
+                    <input asp-for="Duration" class="form-control" />
+                    <span asp-validation-for="Duration" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DepartmentIds" class="form-label fw-semibold">
+                        Departments:
+                    </label>
+
+                    <select asp-for="DepartmentIds"
+                            class="form-select"
+                            asp-items="deptList"
+                            multiple>
+                    </select>
+
+                    <span asp-validation-for="DepartmentIds" class="text-danger small"></span>
+                </div>
+                
+
+                <div class="d-flex justify-content-end gap-2">
+                    <a asp-action="Index" class="btn btn-outline-secondary px-4">
+                        Cancel
+                    </a>
+
+                    <input type="submit"
+                           value="Create"
+                           class="btn btn-success px-4" />
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>

@@ -1,0 +1,74 @@
+﻿@model StudentVM
+
+@{
+    SelectList deptList = new SelectList(ViewBag.depts, "DeptId", "DeptName");
+}
+
+<div class="container mt-5">
+
+    <div class="card shadow-sm">
+
+        <div class="card-header bg-success text-white">
+            <h4 class="mb-0">Create Student</h4>
+        </div>
+
+        <div class="card-body">
+
+            <form method="post">
+
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label fw-semibold">
+                        Student Name:
+                    </label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Age" class="form-label fw-semibold">
+                    </label>
+                    <input asp-for="Age" class="form-control" />
+                    <span asp-validation-for="Age" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label fw-semibold">
+                    </label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger small"></span>
+                </div>
+
+
+                <div class="mb-3">
+                    <label asp-for="DeptNum" class="form-label fw-semibold">
+                        Department
+                    </label>
+                    <select asp-for="DeptNum"
+                            asp-items="deptList"
+                            class="form-select">
+                        <option value="">Select department</option>
+                    </select>
+                    <span asp-validation-for="DeptNum" class="text-danger small"></span>
+                </div>
+
+                <div class="d-flex justify-content-end gap-2">
+                    <a asp-action="Index" class="btn btn-outline-secondary px-4">
+                        Cancel
+                    </a>
+
+                    <input type="submit"
+                           value="Create"
+                           class="btn btn-success px-4" />
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>

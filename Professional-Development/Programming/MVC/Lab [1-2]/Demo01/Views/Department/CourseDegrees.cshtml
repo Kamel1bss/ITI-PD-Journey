@@ -1,0 +1,54 @@
+﻿@model IEnumerable<StudentCourse>
+
+<div class="container mt-5">
+
+    <div class="card shadow-sm">
+
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">
+                Update Student Degrees in @ViewBag.Course.CrsName
+            </h4>
+        </div>
+
+        <div class="card-body p-0">
+
+            <form method="post">
+
+                <table class="table table-hover table-bordered mb-0 align-middle text-center">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Degree</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var stCourse in Model)
+                        {
+                            <tr>
+                                <td class="fw-semibold">
+                                    @stCourse.Student.Name
+                                </td>
+
+                                <td>
+                                    <input type="text"
+                                           name="studCourse.@stCourse.StudentId"
+                                           value="@(stCourse?.Degree)"
+                                           class="form-control text-center" />
+                                </td>
+                            </tr>
+                        }
+
+                        <tr>
+                            <td colspan="2" class="py-3">
+                                <input class="btn btn-success px-4"
+                                       type="submit"
+                                       value="Update" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>

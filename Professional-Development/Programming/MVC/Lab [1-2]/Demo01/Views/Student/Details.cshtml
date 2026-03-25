@@ -1,0 +1,73 @@
+﻿@model Student
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold text-primary">Department Details</h2>
+        <a asp-action="Index" class="btn btn-outline-dark btn-sm">
+            Back
+        </a>
+    </div>
+
+    <div class="card shadow border-0">
+
+        <div class="card-header bg-success text-white">
+            Student Information
+        </div>
+
+        <div class="card-body">
+
+            <div class="row mb-3">
+                <div class="col-sm-4 fw-bold text-secondary">
+                    Student Id
+                </div>
+                <div class="col-sm-8 text-dark">
+                    <span class="badge bg-primary px-3 py-2">
+                        @Model.Id
+                    </span>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="row mb-3">
+                <div class="col-sm-4 fw-bold text-secondary">
+                    Student Name
+                </div>
+                <div class="col-sm-8 text-dark">
+                    <span class="badge bg-warning text-dark px-3 py-2">
+                        @Model.Name
+                    </span>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="row">
+                <div class="col-sm-4 fw-bold text-secondary">
+                    Age
+                </div>
+                <div class="col-sm-8">
+                    <span class="badge bg-danger px-3 py-2">
+                        @Model.Age
+                    </span>
+                </div>
+            </div>
+            
+            <hr />
+
+            <div class="row">
+                <div class="col-sm-4 fw-bold text-secondary">
+                    Department Name
+                </div>
+                <div class="col-sm-8">
+                    <span class="badge bg-info px-3 py-2">
+                        @Model.Department.DeptName
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

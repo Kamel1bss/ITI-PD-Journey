@@ -1,0 +1,43 @@
+﻿@model Department
+
+<div class="container mt-5">
+
+    <div class="card shadow-sm">
+
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">
+                Courses inside @Model.DeptName Department
+            </h4>
+        </div>
+
+        <div class="card-body p-0">
+
+            @if (Model.Courses == null || !Model.Courses.Any())
+            {
+                <div class="p-4 text-center text-muted">
+                    No courses found in this department.
+                </div>
+            }
+            else
+            {
+                <ul class="list-group list-group-flush">
+
+                    @foreach (var item in Model.Courses)
+                    {
+                        <a asp-action="CourseDegrees"
+                           asp-route-DeptId="@Model.DeptId"
+                           asp-route-CrsId="@item.CrsId"
+                           class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+
+                            <span>@item.CrsName</span>
+
+                            <span class="badge bg-success">
+                                View Degrees
+                            </span>
+                        </a>
+                    }
+                </ul>
+            }
+        </div>
+    </div>
+</div>
