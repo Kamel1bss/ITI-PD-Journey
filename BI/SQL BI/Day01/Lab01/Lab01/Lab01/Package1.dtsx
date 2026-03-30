@@ -1,0 +1,588 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/30/2026 7:50:55 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-3864S7OR"
+  DTS:CreatorName="LAPTOP-3864S7OR\abdo mohamed"
+  DTS:DTSID="{659F3B46-6FE4-40DE-93CA-6FE69C68902F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{A69B879E-78DB-444E-908F-180E8703CD0D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.ITI]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A0DF9615-443B-4ABC-9927-54827AD1F202}"
+      DTS:ObjectName="LocalHost.ITI">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=ITI;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{A0DF9615-443B-4ABC-9927-54827AD1F202}LocalHost.ITI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.TestDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{DC63AF7C-3A37-477C-8C30-44EC1542E22B}"
+      DTS:ObjectName="LocalHost.TestDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=TestDB;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{DC63AF7C-3A37-477C-8C30-44EC1542E22B}LocalHost.TestDB;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Clearing TestDB Department"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{EC0D677E-4970-4B50-92AB-36103C1ADD10}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Clearing TestDB Department"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DC63AF7C-3A37-477C-8C30-44EC1542E22B}"
+          SQLTask:SqlStatementSource="truncate table Department" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Transfer Department from ITI to TestDB"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{DF981DA1-CDC5-4FBA-9A3B-25AA2E94991E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Transfer Department from ITI to TestDB"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Transfer Department from ITI to TestDB\ITI (Department)"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="ITI (Department)"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Department]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.ITI]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.ITI]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Dept_Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].ExternalColumns[Dept_Id]"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Dept_Id]"
+                      name="Dept_Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Dept_Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].ExternalColumns[Dept_Name]"
+                      length="50"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Dept_Name]"
+                      name="Dept_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Dept_Desc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].ExternalColumns[Dept_Desc]"
+                      length="100"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Dept_Desc]"
+                      name="Dept_Desc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Dept_Location]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].ExternalColumns[Dept_Location]"
+                      length="50"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Dept_Location]"
+                      name="Dept_Location"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Dept_Manager]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].ExternalColumns[Dept_Manager]"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Dept_Manager]"
+                      name="Dept_Manager"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Manager_hiredate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].ExternalColumns[Manager_hiredate]"
+                      length="10"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Manager_hiredate]"
+                      name="Manager_hiredate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].ExternalColumns[Dept_Id]"
+                      dataType="i4"
+                      name="Dept_Id" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].ExternalColumns[Dept_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Dept_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].ExternalColumns[Dept_Desc]"
+                      dataType="wstr"
+                      length="100"
+                      name="Dept_Desc" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].ExternalColumns[Dept_Location]"
+                      dataType="wstr"
+                      length="50"
+                      name="Dept_Location" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].ExternalColumns[Dept_Manager]"
+                      dataType="i4"
+                      name="Dept_Manager" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].ExternalColumns[Manager_hiredate]"
+                      dataType="wstr"
+                      length="10"
+                      name="Manager_hiredate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Error Output].Columns[Dept_Id]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Error Output].Columns[Dept_Id]"
+                      name="Dept_Id" />
+                    <outputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Error Output].Columns[Dept_Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Error Output].Columns[Dept_Name]"
+                      name="Dept_Name" />
+                    <outputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Error Output].Columns[Dept_Desc]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Error Output].Columns[Dept_Desc]"
+                      name="Dept_Desc" />
+                    <outputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Error Output].Columns[Dept_Location]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Error Output].Columns[Dept_Location]"
+                      name="Dept_Location" />
+                    <outputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Error Output].Columns[Dept_Manager]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Error Output].Columns[Dept_Manager]"
+                      name="Dept_Manager" />
+                    <outputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Error Output].Columns[Manager_hiredate]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Error Output].Columns[Manager_hiredate]"
+                      name="Manager_hiredate" />
+                    <outputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Transfer Department from ITI to TestDB\TestDB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="TestDB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Department]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Transfer Department from ITI to TestDB\TestDB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.TestDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.TestDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].Columns[Dept_Id]"
+                      cachedDataType="i4"
+                      cachedName="Dept_Id"
+                      externalMetadataColumnId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].ExternalColumns[Dept_Id]"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Dept_Id]" />
+                    <inputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].Columns[Dept_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Dept_Name"
+                      externalMetadataColumnId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].ExternalColumns[Dept_Name]"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Dept_Name]" />
+                    <inputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].Columns[Dept_Desc]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Dept_Desc"
+                      externalMetadataColumnId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].ExternalColumns[Dept_Desc]"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Dept_Desc]" />
+                    <inputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].Columns[Dept_Location]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Dept_Location"
+                      externalMetadataColumnId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].ExternalColumns[Dept_Location]"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Dept_Location]" />
+                    <inputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].Columns[Dept_Manager]"
+                      cachedDataType="i4"
+                      cachedName="Dept_Manager"
+                      externalMetadataColumnId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].ExternalColumns[Dept_Manager]"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Dept_Manager]" />
+                    <inputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].Columns[Manager_hiredate]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Manager_hiredate"
+                      externalMetadataColumnId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].ExternalColumns[Manager_hiredate]"
+                      lineageId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output].Columns[Manager_hiredate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].ExternalColumns[Dept_Id]"
+                      dataType="i4"
+                      name="Dept_Id" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].ExternalColumns[Dept_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Dept_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].ExternalColumns[Dept_Desc]"
+                      dataType="wstr"
+                      length="100"
+                      name="Dept_Desc" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].ExternalColumns[Dept_Location]"
+                      dataType="wstr"
+                      length="50"
+                      name="Dept_Location" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].ExternalColumns[Dept_Manager]"
+                      dataType="i4"
+                      name="Dept_Manager" />
+                    <externalMetadataColumn
+                      refId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input].ExternalColumns[Manager_hiredate]"
+                      dataType="wstr"
+                      length="10"
+                      name="Manager_hiredate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Transfer Department from ITI to TestDB\TestDB.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\TestDB.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Department from ITI to TestDB\TestDB.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Transfer Department from ITI to TestDB\TestDB.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Transfer Department from ITI to TestDB\TestDB.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Transfer Department from ITI to TestDB.Paths[OLE DB Source Output]"
+              endId="Package\Transfer Department from ITI to TestDB\TestDB.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Transfer Department from ITI to TestDB\ITI (Department).Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{E00BB8D4-245E-4899-818B-536DC735FD81}"
+      DTS:From="Package\Clearing TestDB Department"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Transfer Department from ITI to TestDB" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="212.8,41.6"
+          Id="Package\Clearing TestDB Department"
+          TopLeft="247.857143384766,66.5294117063903" />
+        <NodeLayout
+          Size="269.6,41.6"
+          Id="Package\Transfer Department from ITI to TestDB"
+          TopLeft="221.428571899935,149.117646928116" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="355.24285764235,108.12941170639">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.988235221726"
+              Start="0,0"
+              End="0,33.488235221726">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.488235221726" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Transfer Department from ITI to TestDB">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="160,41.6"
+          Id="Package\Transfer Department from ITI to TestDB\ITI (Department)"
+          TopLeft="331.428572134096,49.705882309372" />
+        <NodeLayout
+          Size="112,41.6"
+          Id="Package\Transfer Department from ITI to TestDB\TestDB"
+          TopLeft="354.285715039896,133.823529294463" />
+        <EdgeLayout
+          Id="Package\Transfer Department from ITI to TestDB.Paths[OLE DB Source Output]"
+          TopLeft="410.857143586996,91.305882309372">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.5176469850909"
+              Start="0,0"
+              End="0,35.0176469850909">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.0176469850909" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transfer Department from ITI to TestDB\ITI (Department)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Transfer Department from ITI to TestDB\TestDB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

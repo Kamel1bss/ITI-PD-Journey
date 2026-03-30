@@ -1,0 +1,5 @@
+StudentID,FullName,Email,BranchID,TrackID,IntakeYear
+1,Ahmed Ali,ahmed.ali@example.com,1,1,2026
+2,Sara Mohamed,sara.mohamed@example.com,2,3,2026
+3,Omar Khaled,omar.khaled@example.com,3,2,2026
+4,Kamel,Kamel@1bs,1,1,20026

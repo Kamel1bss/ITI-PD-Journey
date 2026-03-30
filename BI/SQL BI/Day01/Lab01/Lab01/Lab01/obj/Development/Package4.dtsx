@@ -1,0 +1,2063 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/30/2026 8:46:07 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-3864S7OR"
+  DTS:CreatorName="LAPTOP-3864S7OR\abdo mohamed"
+  DTS:DTSID="{549A72B6-410B-4885-95F5-E09EF66E8B56}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package4"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{1384D56A-A3F4-42B7-B3E3-6AEBE905C8DA}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A62440E1-C786-4BAC-B0D0-604A86124BA5}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\abdo mohamed\Desktop\BI\SQL BI\Lab01\Less.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crs_Id"
+              DTS:DTSID="{4D2170AB-2385-4507-ABBF-07239089A17F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crs_Name"
+              DTS:DTSID="{576BF59E-621E-45E4-8897-07C284B22AD9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crs_Duration"
+              DTS:DTSID="{D7B76D67-E87C-4EA0-84C6-A81A270AE560}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Top_Name"
+              DTS:DTSID="{D8C43BB3-A897-406E-982F-572A6F3E3A2D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{FF805375-BAE7-4453-9990-5241DCD9E283}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\abdo mohamed\Desktop\BI\SQL BI\Lab01\Equal.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1200"
+              DTS:DTSID="{DEC7E521-5C9A-4FFA-AE03-E8D5FBEBD36C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="photoshop"
+              DTS:DTSID="{AF1BFCCC-075D-4644-9BFC-4C2452527661}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="30"
+              DTS:DTSID="{990FB046-B917-4F6F-A9CB-443FCB90C73B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Design"
+              DTS:DTSID="{C230184B-0127-4AE9-9D7B-8FE9C747D771}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{29934F99-4818-44D6-B3DD-9297FA975C84}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\abdo mohamed\Desktop\BI\SQL BI\Lab01\Greater.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crs_Id"
+              DTS:DTSID="{7836EE53-6A65-4109-8FD2-23257197AA9D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crs_Name"
+              DTS:DTSID="{1899895A-2C1D-4E4E-8390-D658EA336CC3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crs_Duration"
+              DTS:DTSID="{DD15A7B5-B68D-4EC2-8A51-958359D403EC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Top_Name"
+              DTS:DTSID="{DA1E694B-0983-4C8D-A092-7BD6814E1F5D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 3]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5AE93701-CB7F-474E-91D7-38DB2B1AAC7D}"
+      DTS:ObjectName="Flat File Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\abdo mohamed\Desktop\BI\SQL BI\Lab01\Equal.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crs_Id"
+              DTS:DTSID="{9507DE7F-4CB5-463E-80F6-F7721A3A24B0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crs_Name"
+              DTS:DTSID="{A5A33B4C-EF9A-42EF-8F07-2D76B84E493B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crs_Duration"
+              DTS:DTSID="{2F5C7325-4DA3-46AB-A768-D0AAD30CD1A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Top_Name"
+              DTS:DTSID="{88B3C031-79A2-448E-A576-884D2F4A5A5B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 4]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1CE274BE-1532-414E-92C1-C62C2DFF1715}"
+      DTS:ObjectName="Flat File Connection Manager 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\abdo mohamed\Desktop\BI\SQL BI\Lab01\Equal.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crs_Id"
+              DTS:DTSID="{4CED2DA7-E473-4417-A041-C24095E4B2B3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crs_Name"
+              DTS:DTSID="{3A16CF8C-CBC9-4BB5-B0BF-EC4977C5CE2D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crs_Duration"
+              DTS:DTSID="{BEB3AA18-82D6-483B-B383-28F0BEE2F374}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Top_Name"
+              DTS:DTSID="{C4850C05-7294-4524-9940-8D9135C2C43C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.ITI]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{856F4BA5-81C9-40B3-ABCD-4A1AE368347D}"
+      DTS:ObjectName="LocalHost.ITI">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=ITI;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package4-{856F4BA5-81C9-40B3-ABCD-4A1AE368347D}LocalHost.ITI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Split Course into Three Files"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{517951B2-4F82-415B-B4CD-F92678353826}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Split Course into Three Files"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Split Course into Three Files\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Split Course into Three Files\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Conditional Split.Inputs[Conditional Split Input].Columns[Crs_Duration]"
+                      cachedDataType="i4"
+                      cachedName="Crs_Duration"
+                      lineageId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Duration]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Split Course into Three Files\Conditional Split.Outputs[Less]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Less"
+                  synchronousInputId="Package\Split Course into Three Files\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Duration]} &lt; 30</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Crs_Duration &lt; 30</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Split Course into Three Files\Conditional Split.Outputs[Greater]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Greater"
+                  synchronousInputId="Package\Split Course into Three Files\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Duration]} &gt; 30</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Crs_Duration &gt; 30</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Split Course into Three Files\Conditional Split.Outputs[Equal]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Equal"
+                  synchronousInputId="Package\Split Course into Three Files\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Split Course into Three Files\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Split Course into Three Files\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Split Course into Three Files\Crs_Name LowerCase"
+              componentClassID="Microsoft.CharacterMap"
+              contactInfo="Character Map;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Specifies the string operations to apply."
+              name="Crs_Name LowerCase"
+              usesDispositions="true"
+              version="2">
+              <inputs>
+                <input
+                  refId="Package\Split Course into Three Files\Crs_Name LowerCase.Inputs[Character Map Input]"
+                  name="Character Map Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Crs_Name LowerCase.Inputs[Character Map Input].Columns[Crs_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Crs_Name"
+                      errorOrTruncationOperation="Map Column"
+                      lineageId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].Columns[Crs_Name]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          dataType="System.UInt32"
+                          name="MapFlags"
+                          typeConverter="LCMappingType">256</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Split Course into Three Files\Crs_Name LowerCase.Outputs[Character Map Output]"
+                  exclusionGroup="1"
+                  name="Character Map Output"
+                  synchronousInputId="Package\Split Course into Three Files\Crs_Name LowerCase.Inputs[Character Map Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Split Course into Three Files\Crs_Name LowerCase.Outputs[Character Map Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Character Map Error Output"
+                  synchronousInputId="Package\Split Course into Three Files\Crs_Name LowerCase.Inputs[Character Map Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Crs_Name LowerCase.Outputs[Character Map Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\Crs_Name LowerCase.Outputs[Character Map Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Crs_Name LowerCase.Outputs[Character Map Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\Crs_Name LowerCase.Outputs[Character Map Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Split Course into Three Files\Equal"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Equal"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Split Course into Three Files\Equal.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 4]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 4]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Split Course into Three Files\Equal.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Equal.Inputs[Flat File Destination Input].Columns[Crs_Id]"
+                      cachedDataType="i4"
+                      cachedName="Crs_Id"
+                      externalMetadataColumnId="Package\Split Course into Three Files\Equal.Inputs[Flat File Destination Input].ExternalColumns[Crs_Id]"
+                      lineageId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Id]" />
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Equal.Inputs[Flat File Destination Input].Columns[Crs_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Crs_Name"
+                      cachedSortKeyPosition="-1"
+                      externalMetadataColumnId="Package\Split Course into Three Files\Equal.Inputs[Flat File Destination Input].ExternalColumns[Crs_Name]"
+                      lineageId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Name]" />
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Equal.Inputs[Flat File Destination Input].Columns[Crs_Duration]"
+                      cachedDataType="i4"
+                      cachedName="Crs_Duration"
+                      externalMetadataColumnId="Package\Split Course into Three Files\Equal.Inputs[Flat File Destination Input].ExternalColumns[Crs_Duration]"
+                      lineageId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Duration]" />
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Equal.Inputs[Flat File Destination Input].Columns[Top_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Top_Name"
+                      externalMetadataColumnId="Package\Split Course into Three Files\Equal.Inputs[Flat File Destination Input].ExternalColumns[Top_Name]"
+                      lineageId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Top_Name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\Equal.Inputs[Flat File Destination Input].ExternalColumns[Crs_Id]"
+                      dataType="i4"
+                      name="Crs_Id" />
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\Equal.Inputs[Flat File Destination Input].ExternalColumns[Crs_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Crs_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\Equal.Inputs[Flat File Destination Input].ExternalColumns[Crs_Duration]"
+                      dataType="i4"
+                      name="Crs_Duration" />
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\Equal.Inputs[Flat File Destination Input].ExternalColumns[Top_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Top_Name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Split Course into Three Files\Greater"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Greater"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Split Course into Three Files\Greater.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Split Course into Three Files\Greater.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Greater.Inputs[Flat File Destination Input].Columns[Crs_Id]"
+                      cachedDataType="i4"
+                      cachedName="Crs_Id"
+                      externalMetadataColumnId="Package\Split Course into Three Files\Greater.Inputs[Flat File Destination Input].ExternalColumns[Crs_Id]"
+                      lineageId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Id]" />
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Greater.Inputs[Flat File Destination Input].Columns[Crs_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Crs_Name"
+                      cachedSortKeyPosition="-1"
+                      externalMetadataColumnId="Package\Split Course into Three Files\Greater.Inputs[Flat File Destination Input].ExternalColumns[Crs_Name]"
+                      lineageId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Name]" />
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Greater.Inputs[Flat File Destination Input].Columns[Crs_Duration]"
+                      cachedDataType="i4"
+                      cachedName="Crs_Duration"
+                      externalMetadataColumnId="Package\Split Course into Three Files\Greater.Inputs[Flat File Destination Input].ExternalColumns[Crs_Duration]"
+                      lineageId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Duration]" />
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Greater.Inputs[Flat File Destination Input].Columns[Top_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Top_Name"
+                      externalMetadataColumnId="Package\Split Course into Three Files\Greater.Inputs[Flat File Destination Input].ExternalColumns[Top_Name]"
+                      lineageId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Top_Name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\Greater.Inputs[Flat File Destination Input].ExternalColumns[Crs_Id]"
+                      dataType="i4"
+                      name="Crs_Id" />
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\Greater.Inputs[Flat File Destination Input].ExternalColumns[Crs_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Crs_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\Greater.Inputs[Flat File Destination Input].ExternalColumns[Crs_Duration]"
+                      dataType="i4"
+                      name="Crs_Duration" />
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\Greater.Inputs[Flat File Destination Input].ExternalColumns[Top_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Top_Name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Split Course into Three Files\ITI (Course)"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="ITI (Course)"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Course]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Split Course into Three Files\ITI (Course).Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.ITI]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.ITI]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].Columns[Crs_Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].ExternalColumns[Crs_Id]"
+                      lineageId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].Columns[Crs_Id]"
+                      name="Crs_Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].Columns[Crs_Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].ExternalColumns[Crs_Name]"
+                      length="50"
+                      lineageId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].Columns[Crs_Name]"
+                      name="Crs_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].Columns[Crs_Duration]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].ExternalColumns[Crs_Duration]"
+                      lineageId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].Columns[Crs_Duration]"
+                      name="Crs_Duration"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].Columns[Top_Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].ExternalColumns[Top_Id]"
+                      lineageId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].Columns[Top_Id]"
+                      name="Top_Id"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].ExternalColumns[Crs_Id]"
+                      dataType="i4"
+                      name="Crs_Id" />
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].ExternalColumns[Crs_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Crs_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].ExternalColumns[Crs_Duration]"
+                      dataType="i4"
+                      name="Crs_Duration" />
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].ExternalColumns[Top_Id]"
+                      dataType="i4"
+                      name="Top_Id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Error Output].Columns[Crs_Id]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Error Output].Columns[Crs_Id]"
+                      name="Crs_Id" />
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Error Output].Columns[Crs_Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Error Output].Columns[Crs_Name]"
+                      name="Crs_Name" />
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Error Output].Columns[Crs_Duration]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Error Output].Columns[Crs_Duration]"
+                      name="Crs_Duration" />
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Error Output].Columns[Top_Id]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Error Output].Columns[Top_Id]"
+                      name="Top_Id" />
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Split Course into Three Files\ITI (Topic)"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="ITI (Topic)"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Topic]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Split Course into Three Files\ITI (Topic).Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.ITI]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.ITI]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Output].Columns[Top_Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Output].ExternalColumns[Top_Id]"
+                      lineageId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Output].Columns[Top_Id]"
+                      name="Top_Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Output].Columns[Top_Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Output].ExternalColumns[Top_Name]"
+                      length="50"
+                      lineageId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Output].Columns[Top_Name]"
+                      name="Top_Name"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Output].ExternalColumns[Top_Id]"
+                      dataType="i4"
+                      name="Top_Id" />
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Output].ExternalColumns[Top_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Top_Name" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Error Output].Columns[Top_Id]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Error Output].Columns[Top_Id]"
+                      name="Top_Id" />
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Error Output].Columns[Top_Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Error Output].Columns[Top_Name]"
+                      name="Top_Name" />
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Split Course into Three Files\Less"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Less"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Split Course into Three Files\Less.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Split Course into Three Files\Less.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Less.Inputs[Flat File Destination Input].Columns[Crs_Id]"
+                      cachedDataType="i4"
+                      cachedName="Crs_Id"
+                      externalMetadataColumnId="Package\Split Course into Three Files\Less.Inputs[Flat File Destination Input].ExternalColumns[Crs_Id]"
+                      lineageId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Id]" />
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Less.Inputs[Flat File Destination Input].Columns[Crs_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Crs_Name"
+                      cachedSortKeyPosition="-1"
+                      externalMetadataColumnId="Package\Split Course into Three Files\Less.Inputs[Flat File Destination Input].ExternalColumns[Crs_Name]"
+                      lineageId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Name]" />
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Less.Inputs[Flat File Destination Input].Columns[Crs_Duration]"
+                      cachedDataType="i4"
+                      cachedName="Crs_Duration"
+                      externalMetadataColumnId="Package\Split Course into Three Files\Less.Inputs[Flat File Destination Input].ExternalColumns[Crs_Duration]"
+                      lineageId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Duration]" />
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Less.Inputs[Flat File Destination Input].Columns[Top_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Top_Name"
+                      externalMetadataColumnId="Package\Split Course into Three Files\Less.Inputs[Flat File Destination Input].ExternalColumns[Top_Name]"
+                      lineageId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Top_Name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\Less.Inputs[Flat File Destination Input].ExternalColumns[Crs_Id]"
+                      dataType="i4"
+                      name="Crs_Id" />
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\Less.Inputs[Flat File Destination Input].ExternalColumns[Crs_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Crs_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\Less.Inputs[Flat File Destination Input].ExternalColumns[Crs_Duration]"
+                      dataType="i4"
+                      name="Crs_Duration" />
+                    <externalMetadataColumn
+                      refId="Package\Split Course into Three Files\Less.Inputs[Flat File Destination Input].ExternalColumns[Top_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Top_Name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Split Course into Three Files\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Split Course into Three Files\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Merge Join.Inputs[Merge Join Left Input].Columns[Top_Id]"
+                      cachedDataType="i4"
+                      cachedName="Top_Id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Split Course into Three Files\Sort Topic By Top_Id.Outputs[Sort Output].Columns[Top_Id]" />
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Merge Join.Inputs[Merge Join Left Input].Columns[Top_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Top_Name"
+                      lineageId="Package\Split Course into Three Files\Sort Topic By Top_Id.Outputs[Sort Output].Columns[Top_Name]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Split Course into Three Files\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Merge Join.Inputs[Merge Join Right Input].Columns[Top_Id]"
+                      cachedDataType="i4"
+                      cachedName="Top_Id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Split Course into Three Files\Sort Course By Top_Id.Outputs[Sort Output].Columns[Top_Id]" />
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Merge Join.Inputs[Merge Join Right Input].Columns[Crs_Id]"
+                      cachedDataType="i4"
+                      cachedName="Crs_Id"
+                      lineageId="Package\Split Course into Three Files\Sort Course By Top_Id.Outputs[Sort Output].Columns[Crs_Id]" />
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Merge Join.Inputs[Merge Join Right Input].Columns[Crs_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Crs_Name"
+                      lineageId="Package\Split Course into Three Files\Sort Course By Top_Id.Outputs[Sort Output].Columns[Crs_Name]" />
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Merge Join.Inputs[Merge Join Right Input].Columns[Crs_Duration]"
+                      cachedDataType="i4"
+                      cachedName="Crs_Duration"
+                      lineageId="Package\Split Course into Three Files\Sort Course By Top_Id.Outputs[Sort Output].Columns[Crs_Duration]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output]"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output].Columns[Crs_Id]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output].Columns[Crs_Id]"
+                      name="Crs_Id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Split Course into Three Files\Merge Join.Inputs[Merge Join Right Input].Columns[Crs_Id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output].Columns[Crs_Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output].Columns[Crs_Name]"
+                      name="Crs_Name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Split Course into Three Files\Merge Join.Inputs[Merge Join Right Input].Columns[Crs_Name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output].Columns[Crs_Duration]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output].Columns[Crs_Duration]"
+                      name="Crs_Duration">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Split Course into Three Files\Merge Join.Inputs[Merge Join Right Input].Columns[Crs_Duration]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output].Columns[Top_Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output].Columns[Top_Name]"
+                      name="Top_Name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Split Course into Three Files\Merge Join.Inputs[Merge Join Left Input].Columns[Top_Name]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Split Course into Three Files\Sort By Crs_Name Desc"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort By Crs_Name Desc"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Inputs[Sort Input].Columns[Crs_Id]"
+                      cachedDataType="i4"
+                      cachedName="Crs_Id"
+                      lineageId="Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output].Columns[Crs_Id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Inputs[Sort Input].Columns[Crs_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Crs_Name"
+                      lineageId="Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output].Columns[Crs_Name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">-1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Inputs[Sort Input].Columns[Crs_Duration]"
+                      cachedDataType="i4"
+                      cachedName="Crs_Duration"
+                      lineageId="Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output].Columns[Crs_Duration]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Inputs[Sort Input].Columns[Top_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Top_Name"
+                      lineageId="Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output].Columns[Top_Name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Id]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Id]"
+                      name="Crs_Id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output].Columns[Crs_Id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Name]"
+                      name="Crs_Name"
+                      sortKeyPosition="-1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output].Columns[Crs_Name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Duration]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Crs_Duration]"
+                      name="Crs_Duration">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output].Columns[Crs_Duration]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Top_Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output].Columns[Top_Name]"
+                      name="Top_Name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output].Columns[Top_Name]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Split Course into Three Files\Sort Course By Top_Id"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort Course By Top_Id"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Split Course into Three Files\Sort Course By Top_Id.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Sort Course By Top_Id.Inputs[Sort Input].Columns[Crs_Id]"
+                      cachedDataType="i4"
+                      cachedName="Crs_Id"
+                      lineageId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].Columns[Crs_Id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Sort Course By Top_Id.Inputs[Sort Input].Columns[Crs_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Crs_Name"
+                      lineageId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].Columns[Crs_Name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Sort Course By Top_Id.Inputs[Sort Input].Columns[Crs_Duration]"
+                      cachedDataType="i4"
+                      cachedName="Crs_Duration"
+                      lineageId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].Columns[Crs_Duration]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Sort Course By Top_Id.Inputs[Sort Input].Columns[Top_Id]"
+                      cachedDataType="i4"
+                      cachedName="Top_Id"
+                      lineageId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].Columns[Top_Id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Split Course into Three Files\Sort Course By Top_Id.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Sort Course By Top_Id.Outputs[Sort Output].Columns[Crs_Id]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\Sort Course By Top_Id.Outputs[Sort Output].Columns[Crs_Id]"
+                      name="Crs_Id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].Columns[Crs_Id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Sort Course By Top_Id.Outputs[Sort Output].Columns[Crs_Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Split Course into Three Files\Sort Course By Top_Id.Outputs[Sort Output].Columns[Crs_Name]"
+                      name="Crs_Name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].Columns[Crs_Name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Sort Course By Top_Id.Outputs[Sort Output].Columns[Crs_Duration]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\Sort Course By Top_Id.Outputs[Sort Output].Columns[Crs_Duration]"
+                      name="Crs_Duration">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].Columns[Crs_Duration]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Sort Course By Top_Id.Outputs[Sort Output].Columns[Top_Id]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\Sort Course By Top_Id.Outputs[Sort Output].Columns[Top_Id]"
+                      name="Top_Id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output].Columns[Top_Id]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Split Course into Three Files\Sort Topic By Top_Id"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort Topic By Top_Id"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Split Course into Three Files\Sort Topic By Top_Id.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Sort Topic By Top_Id.Inputs[Sort Input].Columns[Top_Id]"
+                      cachedDataType="i4"
+                      cachedName="Top_Id"
+                      lineageId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Output].Columns[Top_Id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Split Course into Three Files\Sort Topic By Top_Id.Inputs[Sort Input].Columns[Top_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Top_Name"
+                      lineageId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Output].Columns[Top_Name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Split Course into Three Files\Sort Topic By Top_Id.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Sort Topic By Top_Id.Outputs[Sort Output].Columns[Top_Id]"
+                      dataType="i4"
+                      lineageId="Package\Split Course into Three Files\Sort Topic By Top_Id.Outputs[Sort Output].Columns[Top_Id]"
+                      name="Top_Id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Output].Columns[Top_Id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Split Course into Three Files\Sort Topic By Top_Id.Outputs[Sort Output].Columns[Top_Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Split Course into Three Files\Sort Topic By Top_Id.Outputs[Sort Output].Columns[Top_Name]"
+                      name="Top_Name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Output].Columns[Top_Name]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Split Course into Three Files.Paths[Character Map Output]"
+              endId="Package\Split Course into Three Files\Sort Course By Top_Id.Inputs[Sort Input]"
+              name="Character Map Output"
+              startId="Package\Split Course into Three Files\Crs_Name LowerCase.Outputs[Character Map Output]" />
+            <path
+              refId="Package\Split Course into Three Files.Paths[Equal]"
+              endId="Package\Split Course into Three Files\Equal.Inputs[Flat File Destination Input]"
+              name="Equal"
+              startId="Package\Split Course into Three Files\Conditional Split.Outputs[Equal]" />
+            <path
+              refId="Package\Split Course into Three Files.Paths[Greater]"
+              endId="Package\Split Course into Three Files\Greater.Inputs[Flat File Destination Input]"
+              name="Greater"
+              startId="Package\Split Course into Three Files\Conditional Split.Outputs[Greater]" />
+            <path
+              refId="Package\Split Course into Three Files.Paths[Less]"
+              endId="Package\Split Course into Three Files\Less.Inputs[Flat File Destination Input]"
+              name="Less"
+              startId="Package\Split Course into Three Files\Conditional Split.Outputs[Less]" />
+            <path
+              refId="Package\Split Course into Three Files.Paths[Merge Join Output]"
+              endId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Inputs[Sort Input]"
+              name="Merge Join Output"
+              startId="Package\Split Course into Three Files\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Split Course into Three Files.Paths[OLE DB Source Output]"
+              endId="Package\Split Course into Three Files\Sort Topic By Top_Id.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Split Course into Three Files\ITI (Topic).Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Split Course into Three Files.Paths[OLE DB Source Output1]"
+              endId="Package\Split Course into Three Files\Crs_Name LowerCase.Inputs[Character Map Input]"
+              name="OLE DB Source Output"
+              startId="Package\Split Course into Three Files\ITI (Course).Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Split Course into Three Files.Paths[Sort Output]"
+              endId="Package\Split Course into Three Files\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Split Course into Three Files\Sort Topic By Top_Id.Outputs[Sort Output]" />
+            <path
+              refId="Package\Split Course into Three Files.Paths[Sort Output1]"
+              endId="Package\Split Course into Three Files\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Split Course into Three Files\Sort Course By Top_Id.Outputs[Sort Output]" />
+            <path
+              refId="Package\Split Course into Three Files.Paths[Sort Output2]"
+              endId="Package\Split Course into Three Files\Conditional Split.Inputs[Conditional Split Input]"
+              name="Sort Output"
+              startId="Package\Split Course into Three Files\Sort By Crs_Name Desc.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="210.4,41.6"
+          Id="Package\Split Course into Three Files"
+          TopLeft="245.714286237347,74.1764705232167" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Split Course into Three Files">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="136.8,41.6"
+          Id="Package\Split Course into Three Files\ITI (Course)"
+          TopLeft="228.571429057997,66.5294117063903" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Split Course into Three Files\ITI (Topic)"
+          TopLeft="413.571429451814,64.2352940613423" />
+        <NodeLayout
+          Size="184.8,41.6"
+          Id="Package\Split Course into Three Files\Sort Course By Top_Id"
+          TopLeft="165.714286067048,223.294117451333" />
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\Split Course into Three Files\Sort Topic By Top_Id"
+          TopLeft="437.14285807342,174.352941023644" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Split Course into Three Files\Merge Join"
+          TopLeft="326.428572123452,322.705882070077" />
+        <EdgeLayout
+          Id="Package\Split Course into Three Files.Paths[Sort Output]"
+          TopLeft="526.34285807342,215.952941023644">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-114.847619283301,106.752941046434"
+              Start="0,0"
+              End="-114.847619283301,99.2529410464335">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.2706455470326" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,59.2706455470326"
+                    Point2="0,63.2706455470326"
+                    Point3="-4,63.2706455470326" />
+                  <mssgle:LineSegment
+                    End="-110.847619283301,63.2706455470326" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-110.847619283301,63.2706455470326"
+                    Point2="-114.847619283301,63.2706455470326"
+                    Point3="-114.847619283301,67.2706455470326" />
+                  <mssgle:LineSegment
+                    End="-114.847619283301,99.2529410464335" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\Split Course into Three Files\Crs_Name LowerCase"
+          TopLeft="162.857143203823,157.811764618744" />
+        <EdgeLayout
+          Id="Package\Split Course into Three Files.Paths[OLE DB Source Output]"
+          TopLeft="478.371429451814,105.835294061342">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="47.9714286216062,68.5176469623012"
+              Start="0,0"
+              End="47.9714286216062,61.0176469623012">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.2588234811506" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.2588234811506"
+                    Point2="0,34.2588234811506"
+                    Point3="4,34.2588234811506" />
+                  <mssgle:LineSegment
+                    End="43.9714286216062,34.2588234811506" />
+                  <mssgle:CubicBezierSegment
+                    Point1="43.9714286216062,34.2588234811506"
+                    Point2="47.9714286216062,34.2588234811506"
+                    Point3="47.9714286216062,38.2588234811506" />
+                  <mssgle:LineSegment
+                    End="47.9714286216062,61.0176469623012" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Split Course into Three Files.Paths[OLE DB Source Output1]"
+          TopLeft="296.971429057997,108.12941170639">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-43.7142858541745,49.6823529123539"
+              Start="0,0"
+              End="-43.7142858541745,42.1823529123539">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.8411764561769" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.8411764561769"
+                    Point2="0,24.8411764561769"
+                    Point3="-4,24.8411764561769" />
+                  <mssgle:LineSegment
+                    End="-39.7142858541745,24.8411764561769" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-39.7142858541745,24.8411764561769"
+                    Point2="-43.7142858541745,24.8411764561769"
+                    Point3="-43.7142858541745,28.8411764561769" />
+                  <mssgle:LineSegment
+                    End="-43.7142858541745,42.1823529123539" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Split Course into Three Files.Paths[Character Map Output]"
+          TopLeft="255.685714635435,199.411764618744">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23.8823528325887"
+              Start="0,0"
+              End="0,16.3823528325887">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.3823528325887" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Split Course into Three Files.Paths[Sort Output1]"
+          TopLeft="258.114286067048,264.894117451333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="112.847619389737,57.8117646187442"
+              Start="0,0"
+              End="112.847619389737,50.3117646187442">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.264045859402" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.264045859402"
+                    Point2="0,34.264045859402"
+                    Point3="4,34.264045859402" />
+                  <mssgle:LineSegment
+                    End="108.847619389737,34.264045859402" />
+                  <mssgle:CubicBezierSegment
+                    Point1="108.847619389737,34.264045859402"
+                    Point2="112.847619389737,34.264045859402"
+                    Point3="112.847619389737,38.264045859402" />
+                  <mssgle:LineSegment
+                    End="112.847619389737,50.3117646187442" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\Split Course into Three Files\Sort By Crs_Name Desc"
+          TopLeft="298.730159366077,395.248365792843" />
+        <EdgeLayout
+          Id="Package\Split Course into Three Files.Paths[Merge Join Output]"
+          TopLeft="392.379365744765,364.305882070077">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.942483722766"
+              Start="0,0"
+              End="0,23.442483722766">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.442483722766" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Split Course into Three Files\Conditional Split"
+          TopLeft="312.142857807327,469.5999997721" />
+        <EdgeLayout
+          Id="Package\Split Course into Three Files.Paths[Sort Output2]"
+          TopLeft="391.436508586702,436.848365792843">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.7516339792568"
+              Start="0,0"
+              End="0,25.2516339792568">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.2516339792568" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="99.2,41.6"
+          Id="Package\Split Course into Three Files\Less"
+          TopLeft="58.7301588551798,528.261437592714" />
+        <EdgeLayout
+          Id="Package\Split Course into Three Files.Paths[Less]"
+          TopLeft="312.142857807327,490.3999997721">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-154.212698952148,58.6614378206136"
+              Start="0,0"
+              End="-146.712698952148,58.6614378206136">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-73.1063494760738,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-73.1063494760738,0"
+                    Point2="-77.1063494760738,0"
+                    Point3="-77.1063494760738,4" />
+                  <mssgle:LineSegment
+                    End="-77.1063494760738,54.6614378206136" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-77.1063494760738,54.6614378206136"
+                    Point2="-77.1063494760738,58.6614378206136"
+                    Point3="-81.1063494760738,58.6614378206136" />
+                  <mssgle:LineSegment
+                    End="-146.712698952148,58.6614378206136" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-87.2239276010738,-15.40234375,20.23515625,9.40234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="104,41.6"
+          Id="Package\Split Course into Three Files\Equal"
+          TopLeft="334.920635633593,563.019607545973" />
+        <NodeLayout
+          Size="113.6,41.6"
+          Id="Package\Split Course into Three Files\Greater"
+          TopLeft="567.460318668292,527.385620667024" />
+        <EdgeLayout
+          Id="Package\Split Course into Three Files.Paths[Greater]"
+          TopLeft="466.542857807327,490.3999997721">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="100.917460860964,57.7856208949236"
+              Start="0,0"
+              End="93.4174608609642,57.7856208949236">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="46.4587304304821,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="46.4587304304821,0"
+                    Point2="50.4587304304821,0"
+                    Point3="50.4587304304821,4" />
+                  <mssgle:LineSegment
+                    End="50.4587304304821,53.7856208949236" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.4587304304821,53.7856208949236"
+                    Point2="50.4587304304821,57.7856208949236"
+                    Point3="54.4587304304821,57.7856208949236" />
+                  <mssgle:LineSegment
+                    End="93.4174608609642,57.7856208949236" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="33.1525194929821,-15.5537109375,34.612421875,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Split Course into Three Files.Paths[Equal]"
+          TopLeft="388.13174672046,511.1999997721">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.8196077738733"
+              Start="0,0"
+              End="0,44.3196077738733">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.3196077738733" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-12.41712890625,16.3551163869367,24.8342578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Split Course into Three Files\ITI (Course)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Split Course into Three Files\ITI (Topic)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
