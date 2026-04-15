@@ -1,0 +1,14 @@
+wwwroot\jquery\jquery.js
+wwwroot\jquery\jquery.min.js
+wwwroot\jquery\jquery.min.map
+wwwroot\jquery\jquery.slim.js
+wwwroot\jquery\jquery.slim.min.js
+wwwroot\jquery\jquery.slim.min.map
+wwwroot\home.html
+D:\Development\iti-web-api\Day02\WebConsumer\WebConsumer\wwwroot\jquery\jquery.js
+D:\Development\iti-web-api\Day02\WebConsumer\WebConsumer\wwwroot\jquery\jquery.min.js
+D:\Development\iti-web-api\Day02\WebConsumer\WebConsumer\wwwroot\jquery\jquery.min.map
+D:\Development\iti-web-api\Day02\WebConsumer\WebConsumer\wwwroot\jquery\jquery.slim.js
+D:\Development\iti-web-api\Day02\WebConsumer\WebConsumer\wwwroot\jquery\jquery.slim.min.js
+D:\Development\iti-web-api\Day02\WebConsumer\WebConsumer\wwwroot\jquery\jquery.slim.min.map
+D:\Development\iti-web-api\Day02\WebConsumer\WebConsumer\wwwroot\home.html
