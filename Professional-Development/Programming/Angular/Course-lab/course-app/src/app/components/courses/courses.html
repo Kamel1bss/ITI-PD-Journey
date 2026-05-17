@@ -1,0 +1,78 @@
+<header class="bg-primary text-white text-center py-4 mb-5">
+    <select 
+        class="form-select w-auto mx-auto" 
+        [(ngModel)]="selectedCategoryId" 
+        (change)="onCategoryChange()">
+        
+        <option value="">All Categories</option>
+        
+        @for (category of categories; track category.id) {
+            <option [value]="category.id">{{ category.name }}</option>
+        }
+    </select>
+</header>
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold text-dark border-start border-primary border-4 ps-3">Available Courses</h2>
+        <span class="badge bg-light text-dark border shadow-sm">Showing {{ courses.length }} Results</span>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        @for (course of courses; track course.id) {
+            <div class="col">
+                <div [ngStyle]="{'background-color': course.seats < 3 ? '#f8d7da' : 'white'}"  class="card h-100 shadow-sm border-0 position-relative overflow-hidden transition-card">
+                    
+                    @if (course.seats === 0) {
+                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center z-3" style="background: rgba(255,255,255,0.7);">
+                            <span class="badge bg-danger fs-5 px-3 py-2 shadow">SOLD OUT</span>
+                        </div>
+                    }
+
+                    <div class="card-img-container">
+                        <img [src]="course.imageUrl" class="card-img-top" [alt]="course.title" style="height: 200px; object-fit: cover;">
+                        <span class="position-absolute top-0 end-0 m-2 badge bg-dark opacity-75">
+                            ID: {{ course.catId }}
+                        </span>
+                    </div>
+
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold text-truncate" [title]="course.title">
+                            {{ course.title }}
+                        </h5>
+                        <p class="text-muted small mb-2">
+                            <i class="bi bi-person-circle me-1"></i> Instructor: {{ course.instructorId }}
+                        </p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
+                            <div class="text-primary fw-bold fs-4">
+                                @if (course.price === 0) {
+                                    <span class="text-success">Free</span>
+                                } @else {
+                                    ${{ course.price.toFixed(2) }}
+                                }
+                            </div>
+                            <div class="small text-end">
+                                <span [class]="course.seats < 10 ? 'text-danger fw-bold' : 'text-muted'">
+                                    {{ course.seats }} seats left
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer bg-transparent border-0 pb-3">
+                        @if(course.seats <= 2 && course.seats > 0) {
+                            <span class="badge bg-danger mb-2">Hurry! Almost Full</span>
+                        }
+                        <button 
+                            class="btn w-100" 
+                            [class]="course.seats > 0 ? 'btn-primary' : 'btn-secondary'"
+                            [disabled]="course.seats === 0"
+                            (click)="onRegister(course)">
+                            {{ course.seats > 0 ? "Register" : 'Join Waitlist' }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

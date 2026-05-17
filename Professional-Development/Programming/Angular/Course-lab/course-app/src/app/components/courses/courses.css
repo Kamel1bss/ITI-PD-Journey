@@ -1,0 +1,18 @@
+.transition-card {
+    transition: all 0.3s ease;
+}
+
+.transition-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1) !important;
+}
+
+.card-img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ensures titles don't break the layout if too long */
+.card-title {
+    min-height: 1.2em;
+}
