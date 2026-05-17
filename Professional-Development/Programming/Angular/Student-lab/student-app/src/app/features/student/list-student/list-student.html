@@ -1,0 +1,42 @@
+<table class="table table-hover border shadow-sm">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Department</th>
+            <th>Supervisor</th>
+            <th class="text-center">Operations</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (student of students(); track student.stId) {
+            <tr>
+                <td>{{ student.stId }}</td>
+                <td><strong>{{ student.stFname }} {{ student.stLname }}</strong></td>
+                <td>{{ student.stAge }}</td>
+                <td>{{ student.stAddress }}</td>
+                <td>
+                    <span class="badge bg-info text-dark">
+                        {{ student.deptName }}
+                    </span>
+                </td>
+                <td class="text-muted">{{ student.supervisorName }}</td>
+                <td class="text-center">
+                    <div class="btn-group btn-group-sm gap-1" role="group">
+                        <button class="btn btn-outline-primary" title="Details" [routerLink]="['/student', student.stId]">
+                            <i class="bi bi-eye"></i> Details
+                        </button>
+                        <button class="btn btn-outline-warning" title="Edit" [routerLink]="['/edit-student', student.stId]">
+                            <i class="bi bi-pencil"></i> Edit
+                        </button>
+                        <button class="btn btn-outline-danger" title="Delete" (click)="onDelete(student.stId)">
+                            <i class="bi bi-trash"></i> Delete
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

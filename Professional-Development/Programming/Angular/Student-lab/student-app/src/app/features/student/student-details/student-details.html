@@ -1,0 +1,57 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-7">
+      @if (student()) {
+        <div class="card shadow-lg border-0 overflow-hidden">
+          <!-- Header: Full Name and ID -->
+          <div class="card-header bg-primary text-white p-4 text-center">
+            <div class="rounded-circle bg-white text-primary d-inline-flex align-items-center justify-content-center mb-3 shadow" 
+                 style="width: 80px; height: 80px;">
+              <i class="bi bi-person-fill fs-1"></i>
+            </div>
+            <h3 class="mb-0">{{ student().stFname }} {{ student().stLname }}</h3>
+            <p class="opacity-75 mb-0">Student ID: {{ student().stId }}</p>
+          </div>
+
+          <div class="card-body p-0">
+            <ul class="list-group list-group-flush">
+              <!-- Address -->
+              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                <span class="text-muted"><i class="bi bi-geo-alt me-2"></i>Address</span>
+                <span class="fw-bold">{{ student().stAddress }}</span>
+              </li>
+              
+              <!-- Age -->
+              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                <span class="text-muted"><i class="bi bi-calendar-event me-2"></i>Age</span>
+                <span class="fw-bold">{{ student().stAge }} Years Old</span>
+              </li>
+
+              <!-- Department -->
+              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                <span class="text-muted"><i class="bi bi-building me-2"></i>Department</span>
+                <span class="badge bg-info text-dark fs-6">{{ student().deptName }}</span>
+              </li>
+
+              <!-- Supervisor -->
+              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                <span class="text-muted"><i class="bi bi-person-badge me-2"></i>Supervisor</span>
+                <span class="fw-bold text-primary">{{ student().supervisorName }}</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card-footer bg-light p-3 d-flex justify-content-between">
+            <button class="btn btn-outline-secondary" routerLink="/home">
+              <i class="bi bi-arrow-left"></i> Back to List
+            </button>
+            <!-- Using stId for the route parameter -->
+            <button class="btn btn-warning" [routerLink]="['/edit-student', student().stId]">
+              <i class="bi bi-pencil"></i> Edit Profile
+            </button>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

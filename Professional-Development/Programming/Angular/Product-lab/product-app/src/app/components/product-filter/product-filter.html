@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <select name="" id="" class="form-select" (change)="onCategoryChange(+categorySelect.value)" #categorySelect>
+                <option value="">All Categories</option>
+                @for (category of categoryList; track $index) {
+                    <option value="{{category.id}}">{{category.name}}</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-6 text-end">
+            <h5>Total Price: <span class="text-success fw-bold">${{ totalPrice }}</span></h5>
+        </div>
+    </div>
+</div>

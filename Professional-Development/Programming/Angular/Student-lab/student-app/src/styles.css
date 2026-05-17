@@ -1,0 +1,12 @@
+/* Ensure the hand cursor shows up */
+.nav-link {
+    cursor: pointer;
+}
+
+/* Add 'nav' to the front to increase priority */
+nav .navbar-nav .nav-link.active {
+    color: #ffffff !important; /* Black text looks better on yellow */
+    font-weight: bold;
+    border-bottom: 2px solid rgb(244, 239, 239);
+    cursor: pointer;
+}

@@ -1,0 +1,57 @@
+<header class="bg-light py-4 mb-5">
+  <div class="container">
+    <app-product-filter [categoryList]="categories" [totalPrice]="currentTotalPrice" (categorySelected)="FilterProducts($event)"/>
+  </div>
+</header>
+<div class="container mt-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="text-primary fw-bold">Product Catalog</h2>
+    <span class="badge bg-secondary">Total Items: {{ products.length }}</span>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+    @for (product of products; track product.id) {
+      <div class="col">
+        <div class="card h-100 shadow-sm border-0 transition-hover">
+          <div class="position-relative">
+            <img [src]="product.imgUrl" class="card-img-top p-2 rounded-4" [alt]="product.name">
+            @if (product.quantity === 0) {
+              <span class="position-absolute top-0 end-0 m-3 badge bg-danger shadow">
+                Out of Stock
+              </span>
+            }
+          </div>
+
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h5 class="card-title mb-0">{{ product.name }}</h5>
+              <span class="text-success fw-bold">${{ product.price }}</span>
+            </div>
+            
+            <p class="text-muted small mb-3">
+              Category ID: {{ product.catId }} <br>
+              <span [class.text-danger]="product.quantity === 0">
+                Stock: {{ product.quantity }} units
+              </span>
+            </p>
+
+            <div class="mt-auto d-grid gap-2">
+              <button 
+                (click)="OnBuy(product)"
+                class="btn btn-primary btn-sm" 
+                [disabled]="product.quantity === 0">
+                <i class="bi bi-cart-plus"></i> Add to Cart
+              </button>
+              <div class="d-flex gap-2">
+                <button class="btn btn-outline-secondary btn-sm flex-grow-1">Details</button>
+                <button class="btn btn-outline-danger btn-sm px-3">
+                    <i class="bi bi-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
