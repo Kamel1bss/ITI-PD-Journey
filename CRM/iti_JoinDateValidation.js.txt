@@ -1,0 +1,33 @@
+var JoinDateValidationHelper = {
+
+    // Validates that the date is today or in the future
+    validateJoinDate: function (executionContext) {
+        var formContext = executionContext.getFormContext();
+        var joinDateAttr = formContext.getAttribute("iti_JoinDate");
+        var joinDateValue = joinDateAttr.getValue();
+
+        if (joinDateValue !== null) {
+            var today = new Date();
+            today.setHours(0, 0, 0, 0); // Normalize to midnight for fair comparison
+
+            var selectedDate = new Date(joinDateValue);
+            selectedDate.setHours(0, 0, 0, 0);
+
+            if (selectedDate < today) {
+                alert("Join Date cannot be in the past. Please select today or a future date.");
+                joinDateAttr.setValue(null); // Clear the field value
+            }
+        }
+    },
+
+    // Locks the field after the record is created
+    lockJoinDate: function (executionContext) {
+        var formContext = executionContext.getFormContext();
+        var formType = formContext.ui.getFormType();
+
+        // Form types: 1 = Create, 2 = Update, 3 = Read-only, 4 = Bulk Edit
+        if (formType !== 1) {
+            formContext.getControl("iti_JoinDate").setDisabled(true);
+        }
+    }
+};
